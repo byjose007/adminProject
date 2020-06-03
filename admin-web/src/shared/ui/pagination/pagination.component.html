@@ -1,0 +1,30 @@
+<div class="row no-gutters d-block">
+	<div class="pgntn style2 p-3 col-sm-12 bg-white m-0">
+	  <ul class="pgntn-lst">
+	    <li class="prv" (click)="setPagination(0)"><a>
+	        << </a>
+	    </li>
+	    <li *ngIf="parametrosPaginacion.pageNumber > 2" (click)="changePage(parametrosPaginacion.pageNumber - 2)">
+	      <a>{{parametrosPaginacion.pageNumber - 2}}</a>
+	    </li>
+	    <li *ngIf="parametrosPaginacion.pageNumber > 1" (click)="changePage(parametrosPaginacion.pageNumber - 1)">
+	      <a>{{parametrosPaginacion.pageNumber - 1}}</a>
+	    </li>
+	    <li><span class="active">{{parametrosPaginacion.pageNumber ? parametrosPaginacion.pageNumber : 1}}</span></li>
+	    <li *ngIf="parametrosPaginacion.pageNumber <= totalPages - 1"
+	      (click)="changePage(parametrosPaginacion.pageNumber + 1)">
+	      <a>{{parametrosPaginacion.pageNumber + 1}}</a>
+	    </li>
+	    <li *ngIf="parametrosPaginacion.pageNumber <= totalPages - 2"
+	      (click)="changePage(parametrosPaginacion.pageNumber + 2)">
+	      <a>{{parametrosPaginacion.pageNumber + 2}}</a>
+	    </li>
+	    <li *ngIf="parametrosPaginacion.pageNumber < totalPages - 5"><a class="font-weight-bold">...</a></li>
+	    <li *ngIf="parametrosPaginacion.pageNumber < totalPages - 5"
+	      (click)="changePage(parametrosPaginacion.pageNumber + 5)">
+	      <a>{{parametrosPaginacion.pageNumber + 5}}</a>
+	    </li>
+	    <li class="nxt" (click)="setPagination(1)"><a>>></a></li>
+	  </ul>
+	</div>
+</div>

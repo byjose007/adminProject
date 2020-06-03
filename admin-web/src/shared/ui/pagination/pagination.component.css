@@ -1,0 +1,19 @@
+table.table {
+  float: left;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.pgntn-lst li{
+cursor: pointer;
+}
+
+.style2 .pgntn-lst > li{
+width: min-content;
+min-width: 36px;
+}
+
+.style2 .pgntn-lst > li span,
+.style2 .pgntn-lst > li a{
+padding: 0 .5em;
+}
